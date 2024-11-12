@@ -17,7 +17,7 @@ public class UserController {
         // If no match found, create a new user
         var newUser = new User(name, email, password);
         User.users.add(newUser); // Add new user to the list
-        System.out.println("User Created Successfully: Name: " + newUser.name + ", Email: " + newUser.email);
+        System.out.println("User Created Successfully: Name: " + newUser.name + ", \nEmail: " + newUser.email + ", \nPassword: " + newUser.password);
     }
 
     // Logging in a User

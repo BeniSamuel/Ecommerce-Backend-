@@ -13,7 +13,7 @@ public class RegistrationController {
         // Input Field
         System.out.println(" Enter Email: ");
         String email = sc.next();
-        System.out.println("Enter Password");
+        System.out.println("Enter Password: ");
         String password = sc.next();
 
 
@@ -35,7 +35,7 @@ public class RegistrationController {
         String name = sc.next();
         System.out.println(" Enter Email: ");
         String email = sc.next();
-        System.out.println(" Enter Password");
+        System.out.println(" Enter Password: ");
         String password = sc.next(); 
         
         // submit signin
