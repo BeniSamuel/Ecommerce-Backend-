@@ -22,5 +22,6 @@ public class Main {
             register.handleSignin();
         }
             
+        sc.close();
     }
 }

@@ -17,14 +17,19 @@ public class UserController {
         // If no match found, create a new user
         var newUser = new User(name, email, password);
         User.users.add(newUser); // Add new user to the list
-        System.out.println("User Created Successfully: Name: " + newUser.name + ", \nEmail: " + newUser.email + ", \nPassword: " + newUser.password);
+        System.out.println("User Created Successfully: Name: " + newUser.name + ", \nEmail: " + newUser.email + ", \nPassword: " + newUser.password + "\n\n");
+        ViewController view = new ViewController();
+
+        view.view();
     }
 
     // Logging in a User
     public void logUser(String email, String password) {
+        ViewController view = new ViewController();
         for (User user : User.users) {
             if (user.email.equals(email) && user.password.equals(password)) {
-                System.out.println("------- Welcome to System, " + user.name + " -------");
+                System.out.println("------- Welcome to System, " + user.name + " -------\n\n");
+                view.view();
                 return;
             }
         }

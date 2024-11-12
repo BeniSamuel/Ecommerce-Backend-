@@ -6,7 +6,16 @@ public class ProductController extends ItemAbstract {
     // Create product
     public void createProduct ( String itemID, String itemName, String itemDescription, byte rate, int price) {
         var newProduct = new Products(itemID, itemName, itemDescription, price, rate);
-        System.out.println("Product Created Successfully!");
+        System.out.println("Product Created Successfully!" + newProduct);
+    }
+
+    public void searchProduct ( String name ) {
+        for ( Products product: Products.products ) {
+            if ( product.itemName.equals(name)) {
+                System.out.println("Product ID: " + product.itemID + "\nProduct Name: " + product.itemName + "\nProduct Description: " + product.itemDescription + "\nProduct rate: " + product.rate + "\nProduct price: " + product.price);
+            }
+        }
+        System.out.println(" Product Not found!!");
     }
 
     // Implementing Getting all products

@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class ViewController {
     public void view() {
-
+        
+        Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println(
                     "1. View Products\n2. Search Product\n3. View Favourites\n4. View Cart\n5. View Profile\n6. Quit");
 
-            Scanner sc = new Scanner(System.in);
+            
             System.out.println("Enter a Choice: ");
             int choice = sc.nextInt();
 
@@ -23,6 +24,9 @@ public class ViewController {
                     break;
                 case 2:
 
+                    System.out.println("Enter product name: ");
+                    String name = sc.next();
+                    productControl.searchProduct(name);
                     break;
                 case 3:
 
@@ -39,7 +43,12 @@ public class ViewController {
                 default:
                     break;
             }
+
+            if (choice == 6) {
+                break;
+            }
         }
 
+        sc.close();
     }
 }
